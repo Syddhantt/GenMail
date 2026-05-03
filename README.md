@@ -29,11 +29,11 @@ Below the proactive buckets, an expandable **"More insights"** section adds two 
 - 📊 **Inbox stats** — total / unread / thread counts, busiest day, top sender, longest thread, who you're awaiting replies from, plus an AI-written one-paragraph "what stands out" summary
 - 🔍 **Cross-thread synthesis** — type a topic ("Phoenix", "Initech") and the agent stitches every relevant thread into a coherent report: current status, timeline, decisions, blockers, and people involved
 
-![Inbox stats with AI-written summary](docs/screenshots/inbox-stats-dark.png)
-
 ## See it in action
 
 ![Thread summary in action](docs/screenshots/thread-summary-dark.png)
+
+![Inbox stats with AI-written summary](docs/screenshots/inbox-stats-dark.png)
 
 Click any email → the panel shows you the thread summary, key decisions, and open questions instantly.
 
