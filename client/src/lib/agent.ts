@@ -41,6 +41,38 @@ export type ProactiveSurface = {
   generated_at: string
 }
 
+export type StatsDashboard = {
+  total_emails: number
+  unread_count: number
+  thread_count: number
+  busiest_day: string
+  busiest_day_count: number
+  most_frequent_sender: string
+  most_frequent_sender_count: number
+  longest_thread_subject: string
+  longest_thread_message_count: number
+  most_recent_thread_subject: string
+  most_recent_thread_age_hours: number
+  awaiting_reply_from: string[]
+  narrative: string
+}
+
+export type SynthesizedThreadRef = {
+  thread_id: string
+  subject: string
+  why_relevant: string
+}
+
+export type CrossThreadSynthesis = {
+  topic: string
+  threads: SynthesizedThreadRef[]
+  timeline: string[]
+  key_decisions: string[]
+  blockers: string[]
+  people_involved: string[]
+  current_status: string
+}
+
 // --- client ----------------------------------------------------------------
 
 async function request<T>(
@@ -63,4 +95,11 @@ export const agentApi = {
     }),
   draftReply: (emailId: number) =>
     request<DraftReply>(`/ai/draft-reply/${emailId}`, { method: "POST" }),
+  stats: () => request<StatsDashboard>("/ai/stats"),
+  synthesize: (topic: string) =>
+    request<CrossThreadSynthesis>("/ai/synthesize", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({ topic }),
+    }),
 }

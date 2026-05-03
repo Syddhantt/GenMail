@@ -23,7 +23,11 @@ Each item shows a score, a one-line reason, and the underlying email — so you 
 It also handles per-thread tasks on demand:
 - 📝 **Summarize** any conversation in 2-3 sentences with extracted decisions and open questions
 - ✍️ **Draft replies** in your own writing voice (learned from past sent emails)
-- 🔍 **Cross-thread synthesis** — "Tell me everything that's going on with Phoenix" → coherent timeline + decisions + blockers + people involved, stitched from every relevant thread
+
+Below the proactive buckets, an expandable **"More insights"** section adds two more tools:
+
+- 📊 **Inbox stats** — total / unread / thread counts, busiest day, top sender, longest thread, who you're awaiting replies from, plus an AI-written one-paragraph "what stands out" summary
+- 🔍 **Cross-thread synthesis** — type a topic ("Phoenix", "Initech") and the agent stitches every relevant thread into a coherent report: current status, timeline, decisions, blockers, and people involved
 
 ## See it in action
 
