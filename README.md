@@ -2,6 +2,20 @@
 
 **An AI assistant for your inbox that tells you what actually needs your attention.**
 
+## Contents
+
+- [What it does](#what-it-does)
+- [See it in action](#see-it-in-action)
+- [How it works (30-second version)](#how-it-works-30-second-version)
+- [Try it yourself](#try-it-yourself)
+- [Quality numbers](#quality-numbers)
+- [Built with](#built-with)
+- [Under the hood — the longer story](#under-the-hood) *(click to expand)*
+- [Future work](#future-work)
+- [License](#license)
+
+---
+
 Open your email client. 30 unread messages. 5 active threads. Some labelled URGENT. Some ghosted weeks ago. Where do you start?
 
 GenMail reads every email you have, and then surfaces the things you'd otherwise miss — overdue commitments, stalled threads, urgent customer issues — ranked by how much they actually matter.
@@ -158,6 +172,7 @@ Full results and per-feature notes: [`agent_service/evals/results/latest.md`](ag
 
 ---
 
+<a id="under-the-hood"></a>
 <details>
 <summary><b>Under the hood — the longer story</b></summary>
 
