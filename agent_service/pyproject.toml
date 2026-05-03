@@ -1,0 +1,49 @@
+[project]
+name = "genmail-agent-service"
+version = "0.1.0"
+description = "LLM-powered intelligence layer for GenMail. Talks to the GenMail REST API and exposes /ai/* endpoints."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi>=0.115.0",
+    "uvicorn[standard]>=0.32.0",
+    "httpx>=0.27.0",
+    "pydantic>=2.9.0",
+    "python-dotenv>=1.0.1",
+    "google-genai>=0.3.0",
+    "groq>=0.11.0",
+    "langgraph>=0.2.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.3.0",
+    "pytest-asyncio>=0.24.0",
+    "ruff>=0.7.0",
+    "respx>=0.21.1",
+]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+# Single-app layout, not a library — be explicit so setuptools doesn't try to
+# auto-discover and trip on the multiple top-level dirs (llm/, agents/, etc.).
+py-modules = ["app", "genmail_client", "config", "logging_db", "schemas", "email_utils"]
+
+[tool.setuptools.packages.find]
+include = ["llm*", "agents*", "prompts*", "evals*"]
+exclude = ["tests*", ".venv*"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
+ignore = ["E501"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]

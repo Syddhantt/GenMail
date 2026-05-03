@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+*.egg-info/
+
+# Local databases (created at runtime)
+*.db
+*.sqlite
+instance/
+
+# Environment / secrets
+.env
+.env.local
+.env.*.local
+
+# Node / Vite
+node_modules/
+dist/
+.vite/
+*.log
+
+# Editor / OS
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# Test / lint caches
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# Build artifacts
+build/
+*.tsbuildinfo

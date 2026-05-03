@@ -1,0 +1,238 @@
+{
+  "ran_at": "2026-05-02T15:41:12",
+  "elapsed_s": 44.51483087497763,
+  "results": [
+    {
+      "name": "F7 Thread State",
+      "n": 13,
+      "correct": 13,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "raw": {
+        "phoenix-timeline-001": {
+          "expected": "WAITING_ON_YOU",
+          "got": "WAITING_ON_YOU",
+          "got_who_blocks": "pm@acme.com",
+          "match": true
+        },
+        "mobile-offline-002": {
+          "expected": "ACTIVE",
+          "got": "ACTIVE",
+          "got_who_blocks": "pm@acme.com",
+          "match": true
+        },
+        "recognition-012": {
+          "expected": "FYI",
+          "got": "FYI",
+          "got_who_blocks": null,
+          "match": true
+        },
+        "design-review-003": {
+          "expected": "BLOCKED",
+          "got": "BLOCKED",
+          "got_who_blocks": "marcus.rivera@acme.com",
+          "match": true
+        },
+        "vendor-013": {
+          "expected": "BLOCKED",
+          "got": "BLOCKED",
+          "got_who_blocks": null,
+          "match": true
+        },
+        "enterprise-dash-004": {
+          "expected": "BLOCKED",
+          "got": "BLOCKED",
+          "got_who_blocks": "jennifer.walsh@acme.com",
+          "match": true
+        },
+        "data-insights-006": {
+          "expected": "FYI",
+          "got": "FYI",
+          "got_who_blocks": null,
+          "match": true
+        },
+        "competitive-011": {
+          "expected": "FYI",
+          "got": "FYI",
+          "got_who_blocks": null,
+          "match": true
+        },
+        "marketing-launch-007": {
+          "expected": "RESOLVED",
+          "got": "RESOLVED",
+          "got_who_blocks": null,
+          "match": true
+        },
+        "support-feedback-005": {
+          "expected": "FYI",
+          "got": "FYI",
+          "got_who_blocks": null,
+          "match": true
+        },
+        "meeting-008": {
+          "expected": "WAITING_ON_YOU",
+          "got": "WAITING_ON_YOU",
+          "got_who_blocks": "pm@acme.com",
+          "match": true
+        },
+        "bug-escalation-010": {
+          "expected": "ACTIVE",
+          "got": "ACTIVE",
+          "got_who_blocks": "pm@acme.com",
+          "match": true
+        },
+        "status-009": {
+          "expected": "FYI",
+          "got": "FYI",
+          "got_who_blocks": null,
+          "match": true
+        }
+      },
+      "notes": []
+    },
+    {
+      "name": "F6 Urgency",
+      "n": 7,
+      "correct": 5,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "raw": {
+        "8": {
+          "error": ""
+        },
+        "12": {
+          "expected": "MEDIUM",
+          "got_label": "MEDIUM",
+          "got_score": 5,
+          "match": true
+        },
+        "14": {
+          "expected": "LOW",
+          "got_label": "MEDIUM",
+          "got_score": 5,
+          "match": false
+        },
+        "17": {
+          "expected": "MEDIUM",
+          "got_label": "MEDIUM",
+          "got_score": 5,
+          "match": true
+        },
+        "19": {
+          "expected": "MEDIUM",
+          "got_label": "MEDIUM",
+          "got_score": 5,
+          "match": true
+        },
+        "20": {
+          "expected": "MEDIUM",
+          "got_label": "MEDIUM",
+          "got_score": 5,
+          "match": true
+        },
+        "21": {
+          "expected": "HIGH",
+          "got_label": "HIGH",
+          "got_score": 8,
+          "match": true
+        }
+      },
+      "notes": [
+        "  [email_id=8] ERROR: ConnectTimeout: ",
+        "  [email_id=14] expected LOW, got MEDIUM (score=5)",
+        "  Overall multi-class accuracy: 0.71"
+      ]
+    },
+    {
+      "name": "F5 Commitments",
+      "n": 4,
+      "correct": 3,
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571428571428571,
+      "raw": {
+        "totals": {
+          "true_positives": 3,
+          "false_positives": 0,
+          "false_negatives": 1,
+          "placeholder_violations": 0
+        }
+      },
+      "notes": [
+        "  [email_id=7] missed: Sarah / stakeholders",
+        "  Placeholder violations: 0 (must be 0)"
+      ]
+    },
+    {
+      "name": "F10 Cross-Thread Relevance",
+      "n": 12,
+      "correct": 11,
+      "precision": 0.7333333333333333,
+      "recall": 0.9166666666666666,
+      "f1": 0.8148148148148148,
+      "raw": {
+        "Phoenix": {
+          "expected": [
+            "bug-escalation-010",
+            "design-review-003",
+            "marketing-launch-007",
+            "meeting-008",
+            "mobile-offline-002",
+            "phoenix-timeline-001",
+            "status-009"
+          ],
+          "got": [
+            "bug-escalation-010",
+            "design-review-003",
+            "marketing-launch-007",
+            "meeting-008",
+            "phoenix-timeline-001",
+            "status-009"
+          ],
+          "tp": 6,
+          "fp": 0,
+          "fn": 1
+        },
+        "Mobile v2.0": {
+          "expected": [
+            "mobile-offline-002",
+            "status-009"
+          ],
+          "got": [
+            "meeting-008",
+            "mobile-offline-002",
+            "phoenix-timeline-001",
+            "status-009"
+          ],
+          "tp": 2,
+          "fp": 2,
+          "fn": 0
+        },
+        "Initech": {
+          "expected": [
+            "bug-escalation-010",
+            "marketing-launch-007",
+            "status-009"
+          ],
+          "got": [
+            "bug-escalation-010",
+            "enterprise-dash-004",
+            "marketing-launch-007",
+            "phoenix-timeline-001",
+            "status-009"
+          ],
+          "tp": 3,
+          "fp": 2,
+          "fn": 0
+        }
+      },
+      "notes": [
+        "  [Phoenix] missed: ['mobile-offline-002']",
+        "  [Mobile v2.0] over-included: ['meeting-008', 'phoenix-timeline-001']",
+        "  [Initech] over-included: ['enterprise-dash-004', 'phoenix-timeline-001']"
+      ]
+    }
+  ]
+}

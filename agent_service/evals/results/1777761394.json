@@ -1,0 +1,248 @@
+{
+  "ran_at": "2026-05-02T15:36:34",
+  "elapsed_s": 44.394666749984026,
+  "results": [
+    {
+      "name": "F7 Thread State",
+      "n": 13,
+      "correct": 12,
+      "precision": 0.9230769230769231,
+      "recall": 0.9230769230769231,
+      "f1": 0.9230769230769231,
+      "raw": {
+        "phoenix-timeline-001": {
+          "expected": "WAITING_ON_YOU",
+          "got": "WAITING_ON_YOU",
+          "got_who_blocks": "pm@acme.com",
+          "match": true
+        },
+        "mobile-offline-002": {
+          "expected": "ACTIVE",
+          "got": "ACTIVE",
+          "got_who_blocks": "pm@acme.com",
+          "match": true
+        },
+        "recognition-012": {
+          "expected": "FYI",
+          "got": "FYI",
+          "got_who_blocks": null,
+          "match": true
+        },
+        "design-review-003": {
+          "expected": "BLOCKED",
+          "got": "BLOCKED",
+          "got_who_blocks": "marcus.rivera@acme.com",
+          "match": true
+        },
+        "vendor-013": {
+          "expected": "BLOCKED",
+          "got": "BLOCKED",
+          "got_who_blocks": null,
+          "match": true
+        },
+        "enterprise-dash-004": {
+          "error": ""
+        },
+        "data-insights-006": {
+          "expected": "FYI",
+          "got": "FYI",
+          "got_who_blocks": null,
+          "match": true
+        },
+        "competitive-011": {
+          "expected": "FYI",
+          "got": "FYI",
+          "got_who_blocks": null,
+          "match": true
+        },
+        "marketing-launch-007": {
+          "expected": "RESOLVED",
+          "got": "RESOLVED",
+          "got_who_blocks": null,
+          "match": true
+        },
+        "support-feedback-005": {
+          "expected": "FYI",
+          "got": "FYI",
+          "got_who_blocks": null,
+          "match": true
+        },
+        "meeting-008": {
+          "expected": "WAITING_ON_YOU",
+          "got": "WAITING_ON_YOU",
+          "got_who_blocks": "pm@acme.com",
+          "match": true
+        },
+        "bug-escalation-010": {
+          "expected": "ACTIVE",
+          "got": "ACTIVE",
+          "got_who_blocks": "pm@acme.com",
+          "match": true
+        },
+        "status-009": {
+          "expected": "FYI",
+          "got": "FYI",
+          "got_who_blocks": null,
+          "match": true
+        }
+      },
+      "notes": [
+        "  [enterprise-dash-004] ERROR: ConnectTimeout: "
+      ]
+    },
+    {
+      "name": "F6 Urgency",
+      "n": 7,
+      "correct": 3,
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6666666666666666,
+      "raw": {
+        "8": {
+          "expected": "MEDIUM",
+          "got_label": "LOW",
+          "got_score": 2,
+          "match": false
+        },
+        "12": {
+          "expected": "MEDIUM",
+          "got_label": "HIGH",
+          "got_score": 8,
+          "match": false
+        },
+        "14": {
+          "expected": "LOW",
+          "got_label": "LOW",
+          "got_score": 2,
+          "match": true
+        },
+        "17": {
+          "expected": "MEDIUM",
+          "got_label": "LOW",
+          "got_score": 2,
+          "match": false
+        },
+        "19": {
+          "expected": "MEDIUM",
+          "got_label": "LOW",
+          "got_score": 2,
+          "match": false
+        },
+        "20": {
+          "expected": "MEDIUM",
+          "got_label": "MEDIUM",
+          "got_score": 5,
+          "match": true
+        },
+        "21": {
+          "expected": "HIGH",
+          "got_label": "HIGH",
+          "got_score": 8,
+          "match": true
+        }
+      },
+      "notes": [
+        "  [email_id=8] expected MEDIUM, got LOW (score=2)",
+        "  [email_id=12] expected MEDIUM, got HIGH (score=8)",
+        "  [email_id=17] expected MEDIUM, got LOW (score=2)",
+        "  [email_id=19] expected MEDIUM, got LOW (score=2)",
+        "  Overall multi-class accuracy: 0.43"
+      ]
+    },
+    {
+      "name": "F5 Commitments",
+      "n": 4,
+      "correct": 2,
+      "precision": 0.4,
+      "recall": 0.5,
+      "f1": 0.4444444444444445,
+      "raw": {
+        "totals": {
+          "true_positives": 2,
+          "false_positives": 3,
+          "false_negatives": 2,
+          "placeholder_violations": 0
+        }
+      },
+      "notes": [
+        "  [email_id=7] missed: Sarah / adjust the roadmap",
+        "  [email_id=7] missed: Sarah / stakeholders",
+        "  [email_id=7] false-positive: 'adjust the roadmap and inform stakeholders about the timeline shift' to 'Jennifer'",
+        "  [email_id=23] false-positive: 'Keep the Phoenix project on track for April 15' to 'David'",
+        "  [email_id=23] false-positive: 'Provide updates on Phoenix, Mobile v2.0, and Enterprise Dashboard' to 'David'",
+        "  Placeholder violations: 0 (must be 0)"
+      ]
+    },
+    {
+      "name": "F10 Cross-Thread Relevance",
+      "n": 12,
+      "correct": 11,
+      "precision": 0.6470588235294118,
+      "recall": 0.9166666666666666,
+      "f1": 0.7586206896551724,
+      "raw": {
+        "Phoenix": {
+          "expected": [
+            "bug-escalation-010",
+            "design-review-003",
+            "marketing-launch-007",
+            "meeting-008",
+            "mobile-offline-002",
+            "phoenix-timeline-001",
+            "status-009"
+          ],
+          "got": [
+            "bug-escalation-010",
+            "design-review-003",
+            "marketing-launch-007",
+            "meeting-008",
+            "phoenix-timeline-001",
+            "status-009"
+          ],
+          "tp": 6,
+          "fp": 0,
+          "fn": 1
+        },
+        "Mobile v2.0": {
+          "expected": [
+            "mobile-offline-002",
+            "status-009"
+          ],
+          "got": [
+            "meeting-008",
+            "mobile-offline-002",
+            "phoenix-timeline-001",
+            "status-009"
+          ],
+          "tp": 2,
+          "fp": 2,
+          "fn": 0
+        },
+        "Initech": {
+          "expected": [
+            "bug-escalation-010",
+            "marketing-launch-007",
+            "status-009"
+          ],
+          "got": [
+            "bug-escalation-010",
+            "design-review-003",
+            "enterprise-dash-004",
+            "marketing-launch-007",
+            "meeting-008",
+            "phoenix-timeline-001",
+            "status-009"
+          ],
+          "tp": 3,
+          "fp": 4,
+          "fn": 0
+        }
+      },
+      "notes": [
+        "  [Phoenix] missed: ['mobile-offline-002']",
+        "  [Mobile v2.0] over-included: ['meeting-008', 'phoenix-timeline-001']",
+        "  [Initech] over-included: ['design-review-003', 'enterprise-dash-004', 'meeting-008', 'phoenix-timeline-001']"
+      ]
+    }
+  ]
+}

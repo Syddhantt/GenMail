@@ -1,0 +1,140 @@
+{
+  "labeling_notes": [
+    "Hand-labeled from server/seeds.py. Today is treated as 2026-05-02 — most threads have been silent ~95-130 days, which means anything WAITING_ON_THEM gets promoted to BLOCKED by the F7 rule (>=7 days).",
+    "Urgency labels use 4 buckets: LOW (1-3), MEDIUM (4-6), HIGH (7-8), CRITICAL (9-10).",
+    "Commitments are paraphrased to make eval matching easier; the verifier should accept any reasonable wording."
+  ],
+  "thread_states": {
+    "phoenix-timeline-001": {
+      "state": "WAITING_ON_YOU",
+      "who_blocks": "pm@acme.com",
+      "rationale": "David asked Alex to plan a Thursday afternoon sync — Alex never replied."
+    },
+    "mobile-offline-002": {
+      "state": "ACTIVE",
+      "who_blocks": "pm@acme.com",
+      "rationale": "Alex closed the loop with a decision AND committed to two follow-up actions (adjust roadmap, inform stakeholders)."
+    },
+    "recognition-012": {
+      "state": "FYI",
+      "who_blocks": null,
+      "rationale": "Pure thanks/recognition — no action expected."
+    },
+    "design-review-003": {
+      "state": "BLOCKED",
+      "who_blocks": "marcus.rivera@acme.com",
+      "rationale": "Alex asked Marcus to add a skip option on step 3 — Marcus never responded. 100+ days silent → promoted from WAITING_ON_THEM."
+    },
+    "vendor-013": {
+      "state": "BLOCKED",
+      "who_blocks": "sales@datavendor.io",
+      "rationale": "Alex asked vendor to send partnership agreement and docs — never received. 100+ days silent."
+    },
+    "enterprise-dash-004": {
+      "state": "BLOCKED",
+      "who_blocks": "jennifer.walsh@acme.com",
+      "rationale": "Jennifer committed to send the full requirements doc 'tomorrow' — never sent. 100+ days silent."
+    },
+    "data-insights-006": {
+      "state": "FYI",
+      "who_blocks": null,
+      "rationale": "Rachel shared analysis with a recommendation — no explicit ask for a response."
+    },
+    "competitive-011": {
+      "state": "FYI",
+      "who_blocks": null,
+      "rationale": "Jennifer literally prefixes the message with 'FYI'. Discussion suggested for a future meeting, no response required."
+    },
+    "marketing-launch-007": {
+      "state": "RESOLVED",
+      "who_blocks": null,
+      "rationale": "Alex answered Lisa's two questions (key features + testimonial pointer)."
+    },
+    "support-feedback-005": {
+      "state": "FYI",
+      "who_blocks": null,
+      "rationale": "Weekly support summary from Mike. 'Might want to look into' is a soft suggestion, not a request."
+    },
+    "meeting-008": {
+      "state": "WAITING_ON_YOU",
+      "who_blocks": "pm@acme.com",
+      "rationale": "Sarah explicitly asked Alex to confirm sprint planning attendance."
+    },
+    "bug-escalation-010": {
+      "state": "ACTIVE",
+      "who_blocks": "pm@acme.com",
+      "rationale": "Alex committed to reach out to Initech's account manager — that action is owed."
+    },
+    "status-009": {
+      "state": "FYI",
+      "who_blocks": null,
+      "rationale": "Alex's weekly update to David. 'Let me know if you have questions' is open-door, not a specific ask."
+    }
+  },
+  "urgency_per_unread_email": {
+    "8":  {"label": "MEDIUM", "rationale": "Design review walkthrough request. Important but not time-critical."},
+    "12": {"label": "MEDIUM", "rationale": "Globex info + commitment. Customer-impacting eventually but no immediate action."},
+    "14": {"label": "LOW",    "rationale": "Pure 'FYI' about competitor news. Suggested for a future meeting only."},
+    "17": {"label": "MEDIUM", "rationale": "Marketing planning ask with implicit launch deadline."},
+    "19": {"label": "MEDIUM", "rationale": "Weekly support trends with one actionable navigation issue from a recent release."},
+    "20": {"label": "MEDIUM", "rationale": "Sprint planning meeting request. Time-bound (Thursday) but routine."},
+    "21": {"label": "HIGH",   "rationale": "URGENT subject + key beta customer (Initech) + active outage + Phoenix testimonial risk. The brief uses this exact email as the canonical HIGH example."}
+  },
+  "commitments_in_sent_emails": {
+    "2": [
+      {
+        "recipient_contains": "David",
+        "what_contains_any": ["status report", "full status"],
+        "deadline_present": true,
+        "expected_status": "OVERDUE"
+      }
+    ],
+    "5": [],
+    "7": [
+      {
+        "recipient_contains": "Sarah",
+        "what_contains_any": ["adjust the roadmap", "roadmap"],
+        "deadline_present": false,
+        "expected_status": "OPEN"
+      },
+      {
+        "recipient_contains": "Sarah",
+        "what_contains_any": ["stakeholders", "let stakeholders know", "inform stakeholders"],
+        "deadline_present": false,
+        "expected_status": "OPEN"
+      }
+    ],
+    "9":  [],
+    "10": [],
+    "18": [],
+    "22": [
+      {
+        "recipient_contains": "Mike",
+        "what_contains_any": ["account manager", "reach out"],
+        "deadline_present": false,
+        "expected_status": "OPEN"
+      }
+    ],
+    "23": []
+  },
+  "cross_thread_relevance": {
+    "Phoenix": [
+      "phoenix-timeline-001",
+      "mobile-offline-002",
+      "design-review-003",
+      "marketing-launch-007",
+      "meeting-008",
+      "bug-escalation-010",
+      "status-009"
+    ],
+    "Mobile v2.0": [
+      "mobile-offline-002",
+      "status-009"
+    ],
+    "Initech": [
+      "bug-escalation-010",
+      "marketing-launch-007",
+      "status-009"
+    ]
+  }
+}
