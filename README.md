@@ -202,5 +202,3 @@ LLM_PROVIDER=ollama    # local, no internet required
 - Replace the `/reset` seed dates with relative timestamps so the demo doesn't go stale
 
 ## License
-
-MIT — see [LICENSE](LICENSE).
