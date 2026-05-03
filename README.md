@@ -116,6 +116,42 @@ Full results and per-feature notes: [`agent_service/evals/results/latest.md`](ag
 
 ---
 
+## Built with
+
+**Backend**
+![Python](https://img.shields.io/badge/Python_3.11-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
+![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)
+![SQLite](https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white)
+![Pydantic](https://img.shields.io/badge/Pydantic_v2-E92063?style=for-the-badge&logo=pydantic&logoColor=white)
+![httpx](https://img.shields.io/badge/httpx-0E5C9F?style=for-the-badge&logo=python&logoColor=white)
+
+**AI / LLM**
+![Groq](https://img.shields.io/badge/Groq-F55036?style=for-the-badge&logo=groq&logoColor=white)
+![Llama 4](https://img.shields.io/badge/Llama_4_Scout-0467DF?style=for-the-badge&logo=meta&logoColor=white)
+![LangGraph](https://img.shields.io/badge/LangGraph-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white)
+![Gemini](https://img.shields.io/badge/Gemini-8E75B2?style=for-the-badge&logo=googlegemini&logoColor=white)
+![Ollama](https://img.shields.io/badge/Ollama-000000?style=for-the-badge&logo=ollama&logoColor=white)
+
+**Frontend**
+![React](https://img.shields.io/badge/React_19-61DAFB?style=for-the-badge&logo=react&logoColor=black)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS_4-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
+![shadcn/ui](https://img.shields.io/badge/shadcn%2Fui-000000?style=for-the-badge&logo=shadcnui&logoColor=white)
+![Radix UI](https://img.shields.io/badge/Radix_UI-161618?style=for-the-badge&logo=radixui&logoColor=white)
+
+**Quality / Evals**
+![Eval Harness](https://img.shields.io/badge/Eval_Harness-Custom_(hand--labeled)-22C55E?style=for-the-badge&logo=checkmarx&logoColor=white)
+![F1](https://img.shields.io/badge/F1-0.86%E2%80%931.00-22C55E?style=for-the-badge)
+![LLM-as-Judge](https://img.shields.io/badge/LLM--as--Judge-supported-22C55E?style=for-the-badge)
+
+**Tooling**
+![uv](https://img.shields.io/badge/uv-DE5FE9?style=for-the-badge&logo=astral&logoColor=white)
+![Pytest](https://img.shields.io/badge/Pytest-0A9EDC?style=for-the-badge&logo=pytest&logoColor=white)
+
+---
+
 <details>
 <summary><b>Under the hood — the longer story</b></summary>
 
